@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
   <div class="header">
     <div class="container">
@@ -31,13 +34,32 @@
           <p class="header-fone">8 (3412) 65-08-77</p>
           <div class="header-social">
             <nuxt-link to="/" class="header-social__link">
-              <img src="@/assets/images/viber.png" alt="Логотип" />
+              <img src="@/assets/images/viber.png" alt="Вайбер" />
             </nuxt-link>
             <nuxt-link to="/" class="header-social__link">
-              <img src="@/assets/images/telegram.png" alt="Логотип" />
+              <img src="@/assets/images/telegram.png" alt="Телеграм" />
             </nuxt-link>
             <nuxt-link to="/" class="header-social__link">
-              <img src="@/assets/images/whatsapp.png" alt="Логотип" />
+              <img src="@/assets/images/whatsapp.png" alt="Ватсап" />
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="header-menu__group flex">
+          <HeaderNavBar />
+          <div class="header-menu__personal flex">
+            <nuxt-link to="/" class="header-menu__personal-link flex">
+              <img src="@/assets/images/сomparisons.png" alt="Сравнения" />
+              <p class="personal-link__descr">Сравнения</p>
+            </nuxt-link>
+
+            <nuxt-link to="/" class="header-menu__personal-link flex">
+              <img src="@/assets/images/basket.png" alt="Корзина" />
+              <p class="personal-link__descr">Корзина</p>
+            </nuxt-link>
+
+            <nuxt-link to="/" class="header-menu__personal-link flex">
+              <img src="@/assets/images/doctor.png" alt="Доктор" />
+              <p class="personal-link__descr">Личный кабинет</p>
             </nuxt-link>
           </div>
         </div>
@@ -45,7 +67,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .header {
   width: 100%;
   background-color: white;
@@ -53,11 +75,13 @@
 
 .header-wrap {
   height: 150px;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-logo__group {
   width: 100%;
+  margin-bottom: 23px;
   justify-content: space-between;
   align-items: center;
 }
@@ -121,5 +145,32 @@
 
 .header-social__link:not(:last-child) {
   margin-right: 5px;
+}
+
+.header-menu__group {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu__personal {
+  align-items: center;
+}
+
+.header-menu__personal-link {
+  height: 40px;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #111;
+}
+
+.header-menu__personal-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-menu__personal-link:hover .personal-link__descr {
+  color: #3257a4;
+  transition: 0.3s ease-in;
 }
 </style>
