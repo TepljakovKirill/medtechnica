@@ -1,5 +1,6 @@
 <template>
   <div class="container">
-    <p>лавная страница</p>
+    <Slider />
+    <Equipment />
   </div>
 </template>

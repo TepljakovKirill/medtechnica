@@ -60,3 +60,28 @@ a {
 .grid {
   display: grid;
 }
+
+.custom-prev {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-next {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* .carousel-wrapper {
+  position: relative;
+  width: 100%;
+} */
