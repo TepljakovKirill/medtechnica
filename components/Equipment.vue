@@ -1,4 +1,9 @@
 <script setup>
+const isVisible = ref(false);
+
+const toggleVisibility = () => {
+  isVisible.value = !isVisible.value;
+};
 </script>
 
 <template>
@@ -64,9 +69,26 @@
           alt="Дефибрилятор"
         />
       </div>
+      <transition name="fade">
+        <div v-show="isVisible" class="fade-block">
+          <div class="equipment-container div6">
+            <p class="equipment-container__title">Импланты</p>
+            <nuxt-link to="/">
+              <p class="equipment-container__link">перейти в каталог</p>
+            </nuxt-link>
+            <img
+              class="equipmen-img implant"
+              src="@/assets/images/implant.png"
+              alt="Имплант"
+            />
+          </div>
+        </div>
+      </transition>
     </div>
     <div class="equipment-list__all flex">
-      <p class="equipment-list__descr">Показать всё медицинское оборудование</p>
+      <p @click="toggleVisibility" role="button" class="equipment-list__descr">
+        {{ !isVisible ? "Показать всё медицинское оборудование" : "Скрыть" }}
+      </p>
     </div>
   </div>
 </template>
@@ -106,6 +128,10 @@
 }
 .div5 {
   grid-area: 2 / 3 / 3 / 4;
+}
+
+.div6 {
+  height: 144px;
 }
 
 .big {
@@ -154,6 +180,11 @@
   bottom: -33px;
 }
 
+.implant {
+  right: -10px;
+  bottom: -5px;
+}
+
 .equipment-container__link {
   width: 150px;
   position: relative;
@@ -197,5 +228,16 @@
   background-size: cover;
   top: 4px;
   right: -11px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>
