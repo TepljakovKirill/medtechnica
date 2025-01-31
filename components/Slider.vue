@@ -149,7 +149,4 @@ const modules = [Navigation];
   top: 72%;
   left: calc(50% - 245px);
 }
-
-.swiper-button-next {
-}
 </style>
