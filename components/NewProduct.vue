@@ -5,7 +5,24 @@ defineProps({
 </script>
 <template>
   <div class="product">
-    <img :src="product.imageUrl" alt="Картинка" />
+    <div class="product-img">
+      <img :src="product.imageUrl" alt="Картинка" />
+      <div class="product-stars flex">
+        <div class="card_star-block">
+          <span v-for="star in product.stars || 0" :key="'gold-' + star">
+            <img class="product-star" src="/images/star.png" alt="Звезда" />
+          </span>
+          <span v-for="star in 5 - product.stars" :key="'empty-' + star">
+            <img
+              class="product-star"
+              src="/images/Star-transparent.png"
+              alt="Пустая звезда"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+
     <div class="product-description">
       <p class="product-art">арт. {{ product.productArt }}</p>
       <p class="product-title">
@@ -26,6 +43,22 @@ defineProps({
   border-radius: 15px;
   box-shadow: inset 0px 0px 3px 0px rgba(50, 87, 164, 0.25);
   background: rgb(255, 255, 255);
+}
+
+.product-img {
+  position: relative;
+}
+
+.product-stars {
+  padding-top: 14px;
+  padding-right: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.product-star {
+  margin-right: 1px;
 }
 
 .product-description {
