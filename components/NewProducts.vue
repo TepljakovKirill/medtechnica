@@ -19,7 +19,7 @@ const nextButton = ref(null);
       <Swiper
         :modules="modules"
         :slides-per-view="'auto'"
-        :space-between="10"
+        :space-between="20"
         :loop="true"
         :navigation="{ prevEl: prevButton, nextEl: nextButton }"
         class="swiper-container"

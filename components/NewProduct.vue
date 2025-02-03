@@ -4,7 +4,7 @@ defineProps({
 });
 </script>
 <template>
-  <div class="product">
+  <nuxt-link to="/" class="product">
     <div class="product-img">
       <img :src="product.imageUrl" alt="Картинка" />
       <div class="product-stars flex">
@@ -34,7 +34,7 @@ defineProps({
         <button class="product-button purchase flex">Купить</button>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 <style scoped>
 .product {
@@ -45,16 +45,10 @@ defineProps({
   background: rgb(255, 255, 255);
 }
 
-.product-img {
-  position: relative;
-}
-
 .product-stars {
-  padding-top: 14px;
-  padding-right: 16px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  right: 34px;
 }
 
 .product-star {
@@ -74,6 +68,7 @@ defineProps({
   margin-top: 8px;
   font-size: 14px;
   font-weight: 500;
+  color: #111;
 }
 
 .product-price {

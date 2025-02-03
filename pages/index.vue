@@ -13,5 +13,6 @@ const { newItems } = storeToRefs(newItemsStore);
     <Slider />
     <Equipment />
     <NewProducts :newItems="newItems" />
+    <Manufacturers />
   </div>
 </template>
