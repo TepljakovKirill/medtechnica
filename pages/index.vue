@@ -14,5 +14,6 @@ const { newItems } = storeToRefs(newItemsStore);
     <Equipment />
     <NewProducts :newItems="newItems" />
     <Manufacturers />
+    <NewsBlock />
   </div>
 </template>

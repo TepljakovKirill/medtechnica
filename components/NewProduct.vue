@@ -38,11 +38,19 @@ defineProps({
 </template>
 <style scoped>
 .product {
-  max-width: 285px;
+  max-width: 284px;
+  display: block;
   border: 0.2px solid rgb(239, 245, 254);
   border-radius: 15px;
   box-shadow: inset 0px 0px 3px 0px rgba(50, 87, 164, 0.25);
   background: rgb(255, 255, 255);
+  transition: 0.3s ease-in;
+}
+
+.product:hover {
+  box-shadow: inset 0px 0px 3px 0px rgba(50, 87, 164, 0.25),
+    0px 20px 50px 0px rgba(73, 122, 226, 0.2);
+  transition: 0.3s ease-in;
 }
 
 .product-stars {
@@ -56,7 +64,7 @@ defineProps({
 }
 
 .product-description {
-  padding: 16px 23px;
+  padding: 16px 20px;
 }
 
 .product-art {
@@ -84,7 +92,7 @@ defineProps({
 }
 
 .product-button {
-  width: 113px;
+  width: 100px;
   height: 27px;
   justify-content: center;
   align-items: center;

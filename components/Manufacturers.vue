@@ -34,6 +34,7 @@ const brands = ref([
 <style scoped>
 .manufacturers {
   margin-top: 94px;
+  padding-bottom: 30px;
   width: 100%;
   border-radius: 45px;
   background: rgb(255, 255, 255);
