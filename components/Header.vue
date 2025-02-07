@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="header-menu__group flex">
-          <HeaderNavBar />
+          <NavBar :isHeader="false" />
           <div class="header-menu__personal flex">
             <nuxt-link to="/" class="header-menu__personal-link flex">
               <img src="@/assets/images/сomparisons.png" alt="Сравнения" />
