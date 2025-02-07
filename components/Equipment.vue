@@ -1,4 +1,8 @@
 <script setup>
+defineProps({
+  isOpen: Boolean,
+});
+
 const isVisible = ref(false);
 
 const toggleVisibility = () => {
@@ -69,23 +73,39 @@ const toggleVisibility = () => {
           alt="Дефибрилятор"
         />
       </div>
-      <transition name="fade">
-        <div v-show="isVisible" class="fade-block">
-          <div class="equipment-container div6">
-            <p class="equipment-container__title">Импланты</p>
-            <nuxt-link to="/">
-              <p class="equipment-container__link">перейти в каталог</p>
-            </nuxt-link>
-            <img
-              class="equipmen-img implant"
-              src="@/assets/images/implant.png"
-              alt="Имплант"
-            />
-          </div>
+
+      <div v-if="isOpen">
+        <div class="equipment-container div6">
+          <p class="equipment-container__title">Импланты</p>
+          <nuxt-link to="/">
+            <p class="equipment-container__link">перейти в каталог</p>
+          </nuxt-link>
+          <img
+            class="equipmen-img implant"
+            src="@/assets/images/implant.png"
+            alt="Имплант"
+          />
         </div>
-      </transition>
+      </div>
+      <div v-else>
+        <transition name="fade">
+          <div v-show="isVisible" class="fade-block">
+            <div class="equipment-container div6">
+              <p class="equipment-container__title">Импланты</p>
+              <nuxt-link to="/">
+                <p class="equipment-container__link">перейти в каталог</p>
+              </nuxt-link>
+              <img
+                class="equipmen-img implant"
+                src="@/assets/images/implant.png"
+                alt="Имплант"
+              />
+            </div>
+          </div>
+        </transition>
+      </div>
     </div>
-    <div class="equipment-list__all flex">
+    <div v-if="!isOpen" class="equipment-list__all flex">
       <p @click="toggleVisibility" role="button" class="equipment-list__descr">
         {{ !isVisible ? "Показать всё медицинское оборудование" : "Скрыть" }}
       </p>
@@ -112,6 +132,7 @@ const toggleVisibility = () => {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  padding-bottom: 30px;
 }
 
 .div1 {
@@ -208,7 +229,6 @@ const toggleVisibility = () => {
 }
 
 .equipment-list__descr {
-  margin-top: 45px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: rgb(50, 87, 164);
   font-weight: 400;
