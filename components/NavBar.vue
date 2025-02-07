@@ -8,13 +8,13 @@ const menuItems = [
   { name: "Производители", path: "/manufacturers" },
   { name: "Доставка", path: "/delyvery" },
   { name: "Оплата", path: "/payment" },
-  { name: "Каталог", path: "/catalog" },
+  { name: "Каталог", path: "/catalog/" },
   { name: "Новости", path: "/news" },
   { name: "Реквизиты", path: "/details" },
   { name: "Контакты", path: "/contacts" },
 ];
 
-const menuFilter = menuItems.filter((item) => item.path !== "/catalog");
+const menuFilter = menuItems.filter((item) => item.path !== "/catalog/");
 </script>
 <template>
   <nav>

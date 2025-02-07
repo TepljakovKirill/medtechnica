@@ -16,7 +16,7 @@ const toggleVisibility = () => {
     <div class="equipment-list">
       <div class="equipment-container big div1">
         <p class="equipment-container__title">Дефибриляторы</p>
-        <nuxt-link to="/">
+        <nuxt-link to="/catalog/defibrillator">
           <p class="equipment-container__link">перейти в каталог</p>
         </nuxt-link>
         <img

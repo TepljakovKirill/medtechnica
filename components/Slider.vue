@@ -21,7 +21,7 @@ const modules = [Navigation];
             <div class="slide-content__descr">
               что то нужно написать, может быть качество и выгодные цены..
             </div>
-            <nuxt-link to="/" class="slide-content__button flex"
+            <nuxt-link to="/catalog" class="slide-content__button flex"
               >перейти в каталог</nuxt-link
             >
           </div>
@@ -48,7 +48,7 @@ const modules = [Navigation];
             <div class="slide-content__descr">
               Cтоят в одном ряду с аппаратами известных мировых производителей
             </div>
-            <nuxt-link to="/" class="slide-content__button flex"
+            <nuxt-link to="/catalog" class="slide-content__button flex"
               >перейти в каталог</nuxt-link
             >
           </div>
