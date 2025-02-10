@@ -2,14 +2,19 @@
 </script>
 
 <template>
-  <div class="container">
-    <h1 class="defibrillator-title">Дефибриляторы</h1>
-    <div class="defibrillator-settngs flex">
-      <div class="defibrillator-container flex">
-        <p class="defibrillator-total">Найдено 14 моделей</p>
-        <button class="defibrillator-reset">Сросить фильтр</button>
+  <div>
+    <div class="container">
+      <h1 class="defibrillator-title">Дефибриляторы</h1>
+      <div class="defibrillator-settngs flex">
+        <div class="defibrillator-container flex">
+          <p class="defibrillator-total">Найдено 14 моделей</p>
+          <button class="defibrillator-reset">Сросить фильтр</button>
+        </div>
+        <button class="defibrillator-new">Новинки</button>
       </div>
-      <button class="defibrillator-filter">Новинки</button>
+    </div>
+    <div class="wrap-container">
+      <SidebarDifibrillator />
     </div>
   </div>
 </template>
